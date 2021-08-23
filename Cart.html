@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stitchers.CO | Cart</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!--link to bootstrap-->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+
+		<!--link to .css file-->
+		<link rel="stylesheet" href="css/Shop-Webpage-Styling.css" />
+
+		<!--link to google font-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!--link to jquery-->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+		<!--added JavaScript files-->
+		<script src="js/Product.js" async></script>
+		<script src="js/Cart.js" async></script>
+
+		<script src="js/Products.js" async></script>
+		<script src="js/checkout.js" async></script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button
+						type="button"
+						class="navbar-toggle"
+						data-toggle="collapse"
+						data-target="#myNavbar"
+					>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="Stitchers.html"
+						><img
+							src="images/S-co-logo.png"
+							alt="Stitchers-logo"
+							height="40px"
+							width="40px"
+					/></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a style="color: lime" href="Stitchers.html">Home</a></li>
+						<li>
+							<a style="color: lime" href="Campaign-Webpage.html">Campaign</a>
+						</li>
+						<!--removed active webpage class for when the user is in the cart-->
+						<li>
+							<a style="color: lime" href="Shop.html">Shop</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a style="color: lime" href="Cart.html"
+								><span class="glyphicon glyphicon-shopping-cart"></span>CART</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid text-center">
+			<div class="row content">
+				<div class="col-sm-12 text-center">
+					<h1>Stitchers.CO Online Shop</h1>
+
+					<br />
+
+					<img
+						src="images/S-co-logo.png"
+						alt="Stitchers-logo"
+						width="200px"
+						height="200px"
+					/>
+
+					<hr />
+					<br />
+
+					<section class="container content-section">
+						<h2 class="section-header">SHOPPING CART</h2>
+						<br />
+						<div class="cart-row">
+							<span class="cart-item cart-header cart-column col-sm-4"
+								>ITEM</span
+							>
+							<span class="cart-quantity cart-header cart-column col-sm-2"
+								>QUANTITY</span
+							>
+							<span class="cart-price cart-header cart-column col-sm-2"
+								>PRICE</span
+							>
+							<span class="cart-price cart-header cart-column col-sm-2"
+								>VAT</span
+							>
+							<span class="cart-price cart-header cart-column col-sm-2"
+								>LINE TOTAL
+							</span>
+						</div>
+
+						<div class="cart-items">
+							<!--items added to the cart go here-->
+						</div>
+
+						<!--all the totals will update here when the user adds an item to their cart-->
+						<div class="cart-totals">
+							<strong class="cart-total-title">SubTotal</strong>
+							<span class="cart-subtotal">R0</span>
+						</div>
+						<div class="cart-totals">
+							<strong class="cart-total-title">VAT</strong>
+							<span class="cart-vat">R0</span>
+						</div>
+						<div class="cart-totals">
+							<strong class="cart-total-title">TOTAL</strong>
+							<span class="cart-total">R0</span>
+						</div>
+
+						<!--discount total will update when the user inputs a valid coupon code-->
+						<div class="cart-totals">
+							<strong class="cart-discount-title">DISCOUNT</strong>
+							<span class="cart-discount">R0</span>
+						</div>
+
+						<!--delivery total will update if a user selects delivery-->
+						<!--the delivery total amount will update depending on which delivery option the user chooses-->
+						<div class="cart-totals">
+							<strong class="cart-delivery-title">DELIVERY</strong>
+							<span class="cart-delivery">R0</span>
+						</div>
+						<div class="cart-totals">
+							<strong class="cart-nettotal-title">NET TOTAL</strong>
+							<span class="cart-nettotal">R0</span>
+						</div>
+
+						<form>
+							<div class="form-group row">
+								<label for="inputCoupon" class="col-sm-2 col-form-label"
+									>Discount Coupon Code:</label
+								>
+								<div class="col-sm-12">
+									<input class="form-control" id="inputCoupon" />
+									<br />
+									<button class="btn btn-primary btn-block redeem">
+										Redeem
+									</button>
+								</div>
+							</div>
+
+							<br />
+							<br />
+
+							<div class="form-group">
+								<label for="inputDelivery">Select Delivery Option</label>
+								<select class="form-control" id="inputDelivery" required>
+									<!--options go here-->
+								</select>
+							</div>
+
+							<br />
+
+							<div
+								class="form-group deliveryOptions collapse"
+								style="text-align: center"
+							>
+								<label for="inputDeliveryOption">Select Delivery Option:</label>
+
+								<br />
+
+								<input type="radio" name="deliveryOption" value="100" />DHL
+								(R100)
+
+								<br />
+								<br />
+
+								<input type="radio" name="deliveryOption" value="120" />PostNet
+								(R120)
+
+								<br />
+								<br />
+
+								<input type="radio" name="deliveryOption" value="150" />RAM
+								(R150)
+							</div>
+
+							<br />
+
+							<div class="form-group row">
+								<div class="col-sm-12"></div>
+								<div class="form-check"></div>
+								<input type="checkbox" class="form-check-input" id="checker" />
+								<label class="form-check-label" for="checker"
+									>Would you like to recieve email notifications about new
+									arrivals?</label
+								>
+							</div>
+
+							<div class="form-group row collapse" id="notifyUser">
+								<label for="inputContact" class="col-sm-2 col-form-label"
+									>Provide Email Address</label
+								>
+								<div class="col-sm-12">
+									<input class="form-control" id="inputContact" />
+								</div>
+							</div>
+						</form>
+
+						<button
+							class="btn btn-primary btn-purchase btn-lg btn-block"
+							type="button"
+						>
+							CONFIRM ORDER
+						</button>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<footer class="container-fluid text-center">
+			<p style="font-size: 15px">
+				33 Jackson Road, Benoni, Johannesburg, South Africa
+			</p>
+			<p style="font-size: 15px">060 984 9667</p>
+		</footer>
+
+		<!--template for the cart items once added to the cart-->
+		<div class="cart-item-template collapse">
+			<span class="cart-item cart-header cart-column col-sm-4"></span>
+			<span class="cart-header cart-column col-sm-2"
+				><input type="number" class="form-control cart-item-quantity" value=""
+			/></span>
+			<span class="cart-item-price cart-header cart-column col-sm-2"></span>
+			<span class="cart-item-vat cart-header cart-column col-sm-2"></span>
+			<span class="cart-item-linetotal cart-header cart-column col-sm-2"></span>
+		</div>
+	</body>
+</html>

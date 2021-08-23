@@ -1,0 +1,163 @@
+.navbar-brand {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*made the colour scheme of the the logo match up with the colour scheme of the page*/
+.col-sm-12,
+body {
+	background-color: rgb(34, 31, 31);
+	color: lime;
+	font-family: "Open Sans", sans-serif;
+}
+
+.shop-item-price {
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.shop-item-title {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 40px;
+	font-weight: bold;
+}
+
+p {
+	font-size: 17px;
+}
+
+/* Got help from https://www.w3schools.com/cssref/css3_pr_filter.asp on how to apply an image filter*/
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px;
+	border: 2px solid black;
+	filter: saturate(200%);
+}
+
+footer {
+	color: black;
+	padding: 15px;
+	overflow: hidden;
+	text-align: center;
+	animation: glow linear 1s infinite;
+}
+
+@keyframes glow {
+	0% {
+		background-color: white;
+	}
+
+	50% {
+		background-color: lime;
+	}
+
+	100% {
+		background-color: white;
+	}
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	font-size: 15px;
+}
+
+.glyphicon,
+.glyphicon-shopping-cart {
+	color: lime;
+	padding: 5px;
+}
+
+/*This site helped create the expanding effect when hovering over shop items
+ https://www.codegrepper.com/code-examples/css/how+to+increase+the+size+of+an+image+when+you+hover+over+css */
+Img:hover {
+	opacity: 0.5;
+	transform: scale(1.05);
+}
+
+.cart-header {
+	font-weight: bold;
+	font-size: 20px;
+	color: lime;
+}
+
+.cart-column {
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid white;
+	margin-right: 24px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.cart-row {
+	display: flex;
+}
+
+.cart-price {
+	font-size: 19px;
+	color: lime;
+}
+
+.cart-item-title {
+	color: lime;
+	margin-left: 8px;
+	font-size: 19px;
+}
+
+.cart-row:last-child {
+	border-bottom: 2px solid white;
+}
+
+.cart-row:last-child .cart-column {
+	border: none;
+}
+
+.cart-totals {
+	text-align: end;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.cart-total-title,
+.cart-nettotal-title {
+	font-weight: bold;
+	font-size: 21px;
+	color: lime;
+	margin-right: 20px;
+}
+
+.cart-discount-title,
+.cart-delivery-title {
+	font-size: 18px;
+	color: lime;
+	margin-right: 20px;
+}
+
+.cart-subtotal,
+.cart-total,
+.cart-vat,
+.cart-discount,
+.cart-delivery {
+	font-size: 18px;
+}
+
+.cart-nettotal {
+	font-size: 22px;
+}
+
+.btn-purchase {
+	margin: 40px auto 80px auto;
+	font-size: 25px;
+}

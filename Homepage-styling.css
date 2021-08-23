@@ -1,0 +1,74 @@
+/*centered the logo in the nav bar*/
+.navbar-brand {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*made the colour scheme of the the logo match up with the colour scheme of the page*/
+/*applied google font*/
+.col-sm-12,
+body {
+	background-color: rgb(34, 31, 31);
+	color: lime;
+	font-family: "Open Sans", sans-serif;
+	font-size: 17px;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 40px;
+	font-style: oblique;
+}
+
+/*centered the main logo*/
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2px;
+	border: 2px solid black;
+}
+
+/*learnt how to create background animation on:
+ https://stackoverflow.com/questions/22622492/animate-background-color-to-different-colors*/
+
+footer {
+	color: black;
+	padding: 15px;
+	overflow: hidden;
+	text-align: center;
+	animation: glow linear 1s infinite;
+}
+
+@keyframes glow {
+	0% {
+		background-color: white;
+	}
+
+	50% {
+		background-color: lime;
+	}
+
+	100% {
+		background-color: white;
+	}
+}
+
+/*this takes away the default round borders of the nav bar and removed 
+the default bottom margin which made it neater*/
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	font-size: 15px;
+}
+
+.glyphicon,
+.glyphicon-shopping-cart {
+	color: lime;
+	padding: 5px;
+}
